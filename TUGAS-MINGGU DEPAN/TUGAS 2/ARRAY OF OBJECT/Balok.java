@@ -12,6 +12,10 @@ public class Balok {
         this.computeAndSetVolume(); 
     }
 
+    public Balok() {
+        this(1, 1, 1); // Memanggil constructor pertama dengan nilai default
+    }
+
     public void computeAndSetVolume(){
         this.volume = this.panjang*this.lebar*this.tinggi;
     }

@@ -4,6 +4,11 @@ public class Kubus {
     private int sisi;
     private int volume;
 
+    public Kubus() {
+        this.sisi = 1; 
+        this.computeAndSetVolume();
+    }
+
     public Kubus(int sisi) {
         this.sisi = sisi;
         this.computeAndSetVolume(); 
@@ -13,6 +18,10 @@ public class Kubus {
         this.volume = this.sisi * this.sisi * this.sisi;
     }
 
+    public int getSisi() {
+        return this.sisi;
+    }
+    
     public int getVolume() {
         return this.volume;
     }

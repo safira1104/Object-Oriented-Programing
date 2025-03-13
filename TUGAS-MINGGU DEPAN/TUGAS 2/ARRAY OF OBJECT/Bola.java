@@ -3,6 +3,10 @@ public class Bola {
     private double radius;
     private double volume;
 
+    public Bola() {
+        this(1); // Memanggil constructor utama dengan radius 1
+    }
+    
     public Bola(double radius) {
         this.radius = radius;
         this.computeAndSetVolume();

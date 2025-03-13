@@ -4,20 +4,22 @@ public class MainBola {
         Bola[] bolaArray = new Bola[5];
 
         for (int i = 0; i < bolaArray.length; i++) {
-            double radius = (i + 1) * 2.0;
-            bolaArray[i] = new Bola(radius);
+            if (i == 1) {
+                bolaArray[i] = new Bola(); // Constructor default (radius = 1)
+            } else {
+                double radius = (i + 2) * 2;
+                bolaArray[i] = new Bola(radius); // Constructor dengan parameter
+            }
         }
 
         System.out.println("Volume masing-masing Bola:");
+        double totalVolume = 0;
         for (Bola b : bolaArray) {
             System.out.println("Bola dengan radius = " + b.getRadius() +
                                " memiliki volume: " + b.getVolume());
-        }
-
-        double totalVolume = 0;
-        for (Bola b : bolaArray) {
             totalVolume += b.getVolume();
         }
+
         double rataRataVolume = totalVolume / bolaArray.length;
 
         System.out.println("\nRata-rata volume Bola: " + rataRataVolume);

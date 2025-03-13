@@ -4,6 +4,12 @@ public class Tabung {
     private double tinggi;
     private double volume;
 
+    public Tabung() {
+        this.radius = 1;
+        this.tinggi = 1;
+        computeAndSetVolume();
+    }
+    
     public Tabung(double radius, double tinggi) {
         this.radius = radius;
         this.tinggi = tinggi;

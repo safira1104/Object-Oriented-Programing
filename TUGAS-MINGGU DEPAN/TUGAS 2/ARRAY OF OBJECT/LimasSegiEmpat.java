@@ -4,12 +4,15 @@ public class LimasSegiEmpat {
     private double tinggi;
     private double volume;
 
+    public LimasSegiEmpat() {
+        this(1, 1); // Memanggil constructor utama dengan nilai default
+    }
+
     public LimasSegiEmpat(double sisi, double tinggi) {
         this.sisi = sisi;
         this.tinggi = tinggi;
-        this.computeandSetVolume(); // Hitung volume otomatis
+        this.computeandSetVolume(); 
     }
-
 
     public void computeandSetVolume(){
         this.volume = (1.0/3)*this.sisi*this.sisi*this.tinggi;
